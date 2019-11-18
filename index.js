@@ -6,7 +6,9 @@ const dynamoDb = new AWS.DynamoDB.DocumentClient();
 const tableName = process.env.TABLE_NAME;
 
 exports.handler = async event => {
+
   console.log("request: " + JSON.stringify(event));
+
   const { id } = event.pathParameters;
   const params = {
     TableName: tableName,
