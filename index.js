@@ -1,12 +1,17 @@
+"use strict";
+
 const AWS = require("aws-sdk");
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
-exports.handler = async event => {
+const tableName = process.env.TABLE_NAME;
 
+exports.handler = async event => {
+  console.log("request: " + JSON.stringify(event));
+  const { id } = event.pathParameters;
   const params = {
-    TableName: "employees",
+    TableName: tableName,
     Key: {
-      Id: "1"
+      Id: id
     }
   };
 
