@@ -2,17 +2,19 @@ const AWS = require("aws-sdk");
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
 exports.handler = async event => {
-  // TODO implement
+
+  const params = {
+    TableName: "employees",
+    Key: {
+      Id: "1"
+    }
+  };
+
+  const employee = await dynamoDb.get(params).promise();
+
   const response = {
     statusCode: 200,
-    body: JSON.stringify("Hello amigos from Lambda!")
+    body: JSON.stringify(employee)
   };
-  return dynamoDb
-    .get({
-      TableName: "employees",
-      Key: {
-        Id: "1"
-      }
-    })
-    .promise();
+  return response;
 };
