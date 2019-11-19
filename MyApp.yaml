@@ -9,6 +9,12 @@ Resources:
       Environment:
         Variables:
           TABLE_NAME: employees
+      Events:
+          GetEmployee:
+              Type: Api
+              Properties:
+                  Path: /employees/{id}
+                  Method: GET
   EmployeesTable:
     Type: AWS::Serverless::SimpleTable
     Properties:
