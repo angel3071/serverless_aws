@@ -5,7 +5,7 @@ Resources:
     Properties:
       Handler: index.handler
       Runtime: nodejs10.x
-      CodeUri: ./src/
+      CodeUri: s3://angramcab-bucket-for-lambda-code/e64c257c6940d74ef11683f4821d9bcb
       Environment:
         Variables:
           TABLE_NAME: employees
