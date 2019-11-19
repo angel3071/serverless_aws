@@ -6,15 +6,17 @@ Resources:
       Handler: index.handler
       Runtime: nodejs10.x
       CodeUri: ./src/
+      Policies:
+          - AmazonDynamoDBFullAccess
       Environment:
         Variables:
-          TABLE_NAME: employees
+          TABLE_NAME: !Ref EmployeesTable
       Events:
-          GetEmployee:
-              Type: Api
-              Properties:
-                  Path: /employees/{id}
-                  Method: GET
+        GetEmployee:
+          Type: Api
+          Properties:
+            Path: /employees/{id}
+            Method: GET
   EmployeesTable:
     Type: AWS::Serverless::SimpleTable
     Properties:
