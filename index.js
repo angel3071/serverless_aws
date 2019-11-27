@@ -9,7 +9,7 @@ exports.handler = async event => {
   };
   return dynamoDb
     .get({
-      TableName: "employees",
+      TableName: "products",
       Key: {
         Id: "1"
       }
