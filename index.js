@@ -4,7 +4,7 @@ const dynamoDb = new AWS.DynamoDB.DocumentClient();
 exports.handler = async event => {
 
   const params = {
-    TableName: "employees",
+    TableName: "products",
     Key: {
       Id: "1"
     }
