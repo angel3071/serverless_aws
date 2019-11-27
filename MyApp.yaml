@@ -9,7 +9,7 @@ Resources:
       Environment:
         Variables:
           TABLE_NAME: employees
-  EmployeesTable:
+  ProductsTable:
     Type: AWS::Serverless::SimpleTable
     Properties:
       PrimaryKey:
