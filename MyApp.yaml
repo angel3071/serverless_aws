@@ -8,4 +8,4 @@ Resources:
       CodeUri: "s3://angramcab-bucket-for-lambda-code/mySourceCode.zip"
       Environment:
         Variables:
-          TABLE_NAME: employees
+          TABLE_NAME: products
