@@ -8,4 +8,4 @@ Resources:
       CodeUri: ./src/
       Environment:
         Variables:
-          TABLE_NAME: employees
+          TABLE_NAME: products
