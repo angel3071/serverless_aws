@@ -1,6 +1,6 @@
 Transform: AWS::Serverless-2016-10-31
 Resources:
-  EmployeesGetFunction:
+  ProductsGetFunction:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
