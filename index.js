@@ -10,11 +10,11 @@ exports.handler = async event => {
     }
   };
 
-  const employee = await dynamoDb.get(params).promise();
+  const product = await dynamoDb.get(params).promise();
 
   const response = {
     statusCode: 200,
-    body: JSON.stringify(employee)
+    body: JSON.stringify(product)
   };
   return response;
 };
