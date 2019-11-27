@@ -1,6 +1,6 @@
 Transform: AWS::Serverless-2016-10-31
 Resources:
-  EmployeesGetFunction:
+  ProductsGetFunction:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
@@ -8,7 +8,7 @@ Resources:
       CodeUri: ./src/
       Environment:
         Variables:
-          TABLE_NAME: employees
+          TABLE_NAME: products
   ProductsTable:
     Type: AWS::Serverless::SimpleTable
     Properties:
